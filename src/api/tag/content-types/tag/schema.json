@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "pluginOptions": { "i18n": { "localized": true } },
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Label"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "blog_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-post.blog-post",
+      "mappedBy": "tags",
+      "pluginOptions": { "i18n": { "localized": false } }
+    }
+  }
+}
