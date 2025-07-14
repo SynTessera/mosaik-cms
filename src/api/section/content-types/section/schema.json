@@ -31,7 +31,7 @@
       "pluginOptions": { "i18n": { "localized": false } }
     },
     "order": {
-      "type": "number",
+      "type": "integer",
       "required": false,
       "default": 0,
       "pluginOptions": { "i18n": { "localized": true } }
